@@ -1,0 +1,81 @@
+{% load static %}
+{% load i18n %}
+<!-- Sidebar Menu Start -->
+        <div class="app-menu">
+
+            <!-- Brand Logo -->
+            <a href="{{ APP_URL }}" class="logo-box">
+                <img src="{% static 'assets/images/logo-light.png' %}" class="logo-light h-6" alt="Light logo">
+                <img src="{% static 'assets/images/logo-dark.png' %}" class="logo-dark h-6" alt="Dark logo">
+            </a>
+
+            <!--- Menu -->
+            <div data-simplebar>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="{{ APP_URL }}" class="menu-link">
+                            <span class="menu-icon"><i class="uil uil-estate"></i></span>
+                            <span class="menu-text"> {% trans "Dashboard" %} </span>
+                        </a>
+                    </li>
+                    
+                    {% if request.resolver_match.kwargs.id %}
+                    <li class="menu-title">{% trans "Chatbot" %}</li>
+                    <li class="menu-item">
+                        <a href="{% url 'chatbot.settings-theme' id=request.resolver_match.kwargs.id %}" class="menu-link">
+                            <span class="menu-icon"><i class="uil uil-comment-alt-share"></i></span>
+                            <span class="menu-text"> {% trans "Try & Share" %}  </span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="{% url 'chatbot.settings' id=request.resolver_match.kwargs.id %}" class="menu-link">
+                            <span class="menu-icon"><i class="uil uil-setting"></i></span>
+                            <span class="menu-text"> {% trans "General settings" %}  </span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{% url 'chatbot.settings-data' id=request.resolver_match.kwargs.id %}" class="menu-link">
+                            <span class="menu-icon"><i class="uil uil-cloud-database-tree"></i></span>
+                            <span class="menu-text"> {% trans "Data & Knowledge" %}  </span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{% url 'chatbot.settings-history' id=request.resolver_match.kwargs.id %}" class="menu-link">
+                            <span class="menu-icon"><i class="uil uil-history"></i></span>
+                            <span class="menu-text">  {% trans "History" %} </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                        {% if user.is_superuser %}
+                        <li class="menu-title">{% trans "Super Admin" %}</li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="{% url 'checkerrors' %}">
+                                <span class="menu-icon"><i class="uil uil-exclamation-triangle"></i></span>
+                                <span class="menu-text">  {% trans "Errors check" %} </span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="{% url 'createuser' %}">
+                                <span class="menu-icon"><i class="uil uil-user-plus"></i></span>
+                                <span class="menu-text"> {% trans "Create user" %}  </span></a>
+                        </li>
+                        {% endif %}
+                        <li class="menu-title">{% trans "User" %}</li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="{% url 'modify_user' %}">
+                                <span class="menu-icon"><i class="uil uil-user-arrows"></i></span>
+                                <span class="menu-text">  {% trans "Modify user details" %} </span>
+                                </a>
+                        </li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- Sidebar Menu End  -->
+        
+        
+        
+       

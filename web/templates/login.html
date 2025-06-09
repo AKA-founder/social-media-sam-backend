@@ -1,0 +1,40 @@
+{% extends 'layout/noapp.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+<a href="{{ APP_URL }}" class="flex justify-center mb-8">
+    <img class="h-6" src="{% static 'assets/images/logo-dark.png' %}" alt="">
+</a>
+<form method="post">
+    {% csrf_token %}
+<div class="mb-4">
+    <label class="mb-2" for="LoggingEmailAddress">{% trans "Username" %}</label>
+    <input id="username" name="username" class="form-input" type="text" placeholder="Enter your username">
+</div>
+
+<div class="mb-4">
+    <div class="flex items-center justify-between mb-2">
+        <label for="loggingPassword">{% trans "Password" %}</label>
+        <a href="#" class="text-sm text-primary">{% trans "Forget Password" %} ?</a>
+    </div>
+    <input id="password" name="password" class="form-input" type="password" placeholder="Enter your password">
+</div>
+
+<!-- <div class="flex items-center mb-4">
+    <input type="checkbox" class="form-checkbox rounded" id="checkbox-signin">
+    <label class="ms-2" for="checkbox-signin">Remember me</label>
+</div> -->
+
+<div class="flex justify-center mb-3">
+    <input type="submit" class="btn w-full text-white bg-primary" value="Login">
+</div>
+</form>
+{% if error %}
+<div class="bg-danger/25 text-danger text-sm p-3" role="alert">
+<span class="font-bold">{% trans "Error" %}:</span> {{ error }}
+</div>
+{% endif %}
+{% endblock content %}
+
+
