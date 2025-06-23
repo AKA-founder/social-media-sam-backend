@@ -79,7 +79,6 @@ prompt-toolkit==3.0.39
 protobuf==4.23.4
 pycparser==2.21
 pydantic==1.10.12
-PyMySQL==1.1.0
 pypdf==3.14.0
 pypdfium2==4.26.0
 python-dateutil==2.8.2
@@ -113,3 +112,5 @@ urllib3==1.26.16
 vine==5.0.0
 wcwidth==0.2.6
 yarl==1.9.2
+psycopg2-binary>=2.9.0
+dj-database-url>=1.0.0
