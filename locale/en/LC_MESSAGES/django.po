@@ -1,0 +1,972 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-02 17:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: management/management/commands/inspire.py:8
+msgid "Displays an inspiring quote"
+msgstr ""
+
+#: management/management/commands/inspire.py:12
+msgid "Don't forget to set INSPIRING_QUOTES in settings.py!"
+msgstr ""
+
+#: web/templates/create_user.html:11
+msgid "Create a new user"
+msgstr ""
+
+#: web/templates/create_user.html:12
+msgid "Please note down the username and password to send to the user."
+msgstr ""
+
+#: web/templates/create_user.html:13
+msgid ""
+"They will be required to change these credentials upon their first login."
+msgstr ""
+
+#: web/templates/create_user.html:19 web/templates/login.html:35
+#: web/templates/settings.html:123
+#: web/templates/settings/settings-data-website.html:203
+msgid "Error"
+msgstr ""
+
+#: web/templates/create_user.html:36 web/templates/login.html:12
+#: web/templates/modify_user.html:21
+msgid "Username"
+msgstr ""
+
+#: web/templates/create_user.html:46 web/templates/modify_user.html:31
+msgid "First name"
+msgstr ""
+
+#: web/templates/create_user.html:56 web/templates/modify_user.html:41
+msgid "Last name"
+msgstr ""
+
+#: web/templates/create_user.html:66 web/templates/modify_user.html:51
+msgid "Email"
+msgstr ""
+
+#: web/templates/create_user.html:76 web/templates/login.html:18
+#: web/templates/modify_user.html:61
+msgid "Password"
+msgstr ""
+
+#: web/templates/create_user.html:79 web/templates/modify_user.html:64
+msgid "Suggested password (user will change)"
+msgstr ""
+
+#: web/templates/create_user.html:87 web/templates/modify_user.html:72
+msgid "Check password"
+msgstr ""
+
+#: web/templates/create_user.html:97
+#: web/templates/layout/sidebar-bot-page.html:60
+msgid "Create user"
+msgstr ""
+
+#: web/templates/create_user.html:109
+msgid "New user created."
+msgstr ""
+
+#: web/templates/create_user.html:110
+#: web/templates/layout/sidebar-bot-page.html:63
+msgid "User"
+msgstr ""
+
+#: web/templates/create_user.html:112
+msgid "Back to home"
+msgstr ""
+
+#: web/templates/errors_check.html:9
+msgid "Error Check"
+msgstr ""
+
+#: web/templates/errors_check.html:15
+msgid "Payload"
+msgstr ""
+
+#: web/templates/errors_check.html:19
+msgid "UUID"
+msgstr ""
+
+#: web/templates/errors_check.html:23
+msgid "Exception"
+msgstr ""
+
+#: web/templates/errors_check.html:27
+msgid "Failed At"
+msgstr ""
+
+#: web/templates/errors_check.html:50
+msgid "No errors found."
+msgstr ""
+
+#: web/templates/errors_check.html:59
+#: web/templates/settings/settings-data-codebase.html:94
+#: web/templates/settings/settings-data-documents.html:162
+#: web/templates/settings/settings-data-website.html:238
+msgid "first"
+msgstr ""
+
+#: web/templates/errors_check.html:60
+#: web/templates/settings/settings-data-codebase.html:95
+#: web/templates/settings/settings-data-documents.html:163
+#: web/templates/settings/settings-data-website.html:239
+msgid "previous"
+msgstr ""
+
+#: web/templates/errors_check.html:63
+msgid "Page"
+msgstr ""
+
+#: web/templates/errors_check.html:63
+msgid "of"
+msgstr ""
+
+#: web/templates/errors_check.html:66
+#: web/templates/settings/settings-data-codebase.html:103
+#: web/templates/settings/settings-data-documents.html:171
+#: web/templates/settings/settings-data-website.html:247
+msgid "next"
+msgstr ""
+
+#: web/templates/errors_check.html:67
+#: web/templates/settings/settings-data-codebase.html:104
+#: web/templates/settings/settings-data-documents.html:172
+#: web/templates/settings/settings-data-website.html:248
+msgid "last"
+msgstr ""
+
+#: web/templates/index.html:8
+msgid "My chatbots"
+msgstr ""
+
+#: web/templates/index.html:12
+msgid "Number of bots"
+msgstr ""
+
+#: web/templates/index.html:15
+msgid "Create new chatbot"
+msgstr ""
+
+#: web/templates/index.html:57
+msgid "Statistics of discussions in the last days"
+msgstr ""
+
+#: web/templates/index.html:75
+msgid "Data Sources Added Over Time"
+msgstr ""
+
+#: web/templates/layout/app.html:7
+msgid "Dashboard | OpenChat"
+msgstr ""
+
+#: web/templates/layout/app.html:55
+msgid "Sign Out"
+msgstr ""
+
+#: web/templates/layout/header.html:7
+msgid "Menu Toggle Button"
+msgstr ""
+
+#: web/templates/layout/header.html:13
+#: web/templates/layout/sidebar-bot-page.html:18
+#: web/templates/onboarding/other-data-sources-website.html:5
+#: web/templates/onboarding/step-0.html:5
+#: web/templates/onboarding/step-1.html:4
+#: web/templates/onboarding/step-2-pdf.html:5
+#: web/templates/onboarding/step-2.html:4
+#: web/templates/onboarding/step-4.html:4
+#: web/templates/settings-analytics.html:4
+msgid "Dashboard"
+msgstr ""
+
+#: web/templates/layout/header.html:15
+msgid "Profile Menu Offcanvas Button"
+msgstr ""
+
+#: web/templates/layout/noapp.html:7
+msgid "Login | OpenChat"
+msgstr ""
+
+#: web/templates/layout/noapp.html:31
+msgid "Create an Account ?"
+msgstr ""
+
+#: web/templates/layout/noapp.html:31
+msgid "Register"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:23
+msgid "Chatbot"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:27
+#: web/templates/settings-theme.html:22
+msgid "Try & Share"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:34
+msgid "General settings"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:40
+msgid "Data & Knowledge"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:46
+msgid "History"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:51
+msgid "Super Admin"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:55
+msgid "Errors check"
+msgstr ""
+
+#: web/templates/layout/sidebar-bot-page.html:67
+msgid "Modify user details"
+msgstr ""
+
+#: web/templates/login.html:19
+msgid "Forget Password"
+msgstr ""
+
+#: web/templates/modify_user.html:10
+msgid "Modify your user data"
+msgstr ""
+
+#: web/templates/modify_user.html:81
+msgid "Password and Check password"
+msgstr ""
+
+#: web/templates/modify_user.html:81
+msgid "do not need to be sent if they are not changing."
+msgstr ""
+
+#: web/templates/modify_user.html:85
+msgid "Update user"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:41
+msgid "Upload files as sources"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:56
+#: web/templates/onboarding/other-data-sources-website.html:58
+#: web/templates/onboarding/step-1.html:55
+#: web/templates/onboarding/step-2-codebase.html:57
+#: web/templates/onboarding/step-2-pdf.html:83
+#: web/templates/onboarding/step-2.html:57
+#: web/templates/settings/settings-data-addmore.html:34
+msgid "Close"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:75
+#: web/templates/onboarding/step-2-pdf.html:105
+msgid "Click to upload or drag & drop"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:76
+msgid "you can upload up to 5 files, and we will process the first ±100k words"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:89
+msgid "Delete files after sending them for processing."
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:100
+#: web/templates/onboarding/step-2-pdf.html:130
+msgid ""
+"Check this only if you have scanned pages in the PDF document and want them "
+"to be sent to OCR services."
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:107
+#: web/templates/onboarding/step-2-pdf.html:136
+msgid "We are accepting PDF/DOCX/XLSX/TXT(CSV/JSON)."
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:108
+#: web/templates/onboarding/step-2-pdf.html:137
+msgid "PDF files can contain both text and images. We will send to OCR."
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:109
+#: web/templates/onboarding/step-2-pdf.html:138
+msgid ""
+"You can upload multiple files at once and we will process them in the "
+"background."
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:114
+#: web/templates/onboarding/other-data-sources-website.html:94
+#: web/templates/onboarding/step-1.html:150
+#: web/templates/onboarding/step-2-codebase.html:99
+#: web/templates/onboarding/step-2-pdf.html:145
+#: web/templates/onboarding/step-2.html:91
+#: web/templates/onboarding/step-3.html:92
+msgid "Back"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-pdf.html:115
+#: web/templates/onboarding/other-data-sources-website.html:95
+#: web/templates/onboarding/step-2-codebase.html:100
+#: web/templates/onboarding/step-2-pdf.html:147
+#: web/templates/onboarding/step-2.html:92
+#: web/templates/onboarding/step-3.html:93
+msgid "Next Step"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-website.html:43
+#: web/templates/onboarding/step-2.html:40
+msgid "Website information"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-website.html:55
+msgid "Please enter a valid website URL, it\\"
+msgstr ""
+
+#: web/templates/onboarding/other-data-sources-website.html:75
+#: web/templates/onboarding/step-2.html:73
+msgid "Website url"
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:41
+msgid "Let's set up your first chatbot, for free"
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:42
+msgid "And here how we are going to do it:"
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:57
+msgid "You provide the system with data"
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:72
+msgid "We train our AI on this knowledge"
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:74
+msgid "It might take minutes or hours, depend on how large is your data."
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:86
+msgid "You integrate the chatbot on your website"
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:88
+msgid ""
+"That is it! we will provide you with a Javascript code to put it on your "
+"website."
+msgstr ""
+
+#: web/templates/onboarding/step-0.html:95
+msgid "Let's do it!"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:39
+msgid "Select your data source"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:40
+msgid "Select the source of your data to train your new chatbot"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:40
+msgid "you can always add new sources later"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:52
+msgid ""
+"Please enter a valid website URL, it's important that your website is live "
+"and accessible"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:73 web/templates/settings.html:47
+#: web/templates/settings/settings-data-addmore.html:54
+msgid "Website"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:75
+#: web/templates/settings/settings-data-addmore.html:56
+msgid "We will crawl your website and extract the knowledge automatically."
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:83
+#: web/templates/settings/settings-data-addmore.html:65
+msgid "PDF/DOCX/TXT/JSON/XLSX files"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:85
+#: web/templates/settings/settings-data-addmore.html:67
+msgid "We will scan your files and extract knowledge and any information"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:93
+msgid "Codebase"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:95
+msgid ""
+"Provide a link to your codebase and we will extract the knowledge and any "
+"information"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:103
+#: web/templates/settings/settings-data-addmore.html:75
+msgid "Confluence"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:112
+#: web/templates/onboarding/step-1.html:135
+#: web/templates/settings/settings-data-codebase.html:65
+#: web/templates/settings/settings-data-website.html:93
+msgid "soon"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:116
+#: web/templates/settings/settings-data-addmore.html:77
+msgid "Automatically extract data from your Confluence from your workspace"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:126
+msgid "Notion"
+msgstr ""
+
+#: web/templates/onboarding/step-1.html:140
+msgid "Automatically extract data from your Notion from your workspace"
+msgstr ""
+
+#: web/templates/onboarding/step-2-codebase.html:40
+msgid "GitHub Repo information"
+msgstr ""
+
+#: web/templates/onboarding/step-2-codebase.html:53
+msgid "Please provide a valid GitHub repository url."
+msgstr ""
+
+#: web/templates/onboarding/step-2-codebase.html:73
+msgid "Repository url"
+msgstr ""
+
+#: web/templates/onboarding/step-2-codebase.html:74
+msgid "must have"
+msgstr ""
+
+#: web/templates/onboarding/step-2-codebase.html:75
+msgid "main"
+msgstr ""
+
+#: web/templates/onboarding/step-2-codebase.html:75
+msgid "branch"
+msgstr ""
+
+#: web/templates/onboarding/step-2-codebase.html:92
+msgid "Your repo is private?"
+msgstr ""
+
+#: web/templates/onboarding/step-2-pdf.html:66
+msgid "Upload PDF files as sources"
+msgstr ""
+
+#: web/templates/onboarding/step-2-pdf.html:107
+msgid ""
+"you can upload up to 5 pdf files, and we will process the first ±100k words"
+msgstr ""
+
+#: web/templates/onboarding/step-2-pdf.html:120
+msgid "Delete PDF files after sending them for processing."
+msgstr ""
+
+#: web/templates/onboarding/step-2-pdf.html:146
+msgid "Skip and add later"
+msgstr ""
+
+#: web/templates/onboarding/step-2.html:81
+msgid "Just to make sure we are on the same page"
+msgstr ""
+
+#: web/templates/onboarding/step-2.html:84
+msgid ""
+"We might not be able to crawl some websites, especially websites that are "
+"built using JS (SPA), we are working on adding headless browsing to support "
+"all sorts of websites."
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:40
+msgid "In the meanwhile, Let's do some configurations"
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:42
+msgid ""
+"While we are crawling your website, you can do some configurations on your "
+"chatbot"
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:52
+msgid "What type of character that chatbot must be?"
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:54
+msgid ""
+"Choose the preferred bot character, wise & strict character will force the "
+"bot to only answer questions that have been seen before, while the "
+"Knowledgeable makes the bot a bit more flexible and tries to be creative "
+"with answers"
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:67
+msgid "Wise & Strict"
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:68
+msgid "Only answers questions within the given knowledge."
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:80
+msgid "Knowledgeable"
+msgstr ""
+
+#: web/templates/onboarding/step-3.html:81
+msgid "Answers questions within the given knowledge and beyond."
+msgstr ""
+
+#: web/templates/onboarding/step-4.html:45
+msgid "That is it!"
+msgstr ""
+
+#: web/templates/onboarding/step-4.html:46
+msgid "Your chatbot name:"
+msgstr ""
+
+#: web/templates/onboarding/step-4.html:49
+msgid "Open your bot"
+msgstr ""
+
+#: web/templates/settings-analytics.html:59
+msgid "analytics"
+msgstr ""
+
+#: web/templates/settings-analytics.html:64
+msgid "Try it out! ->"
+msgstr ""
+
+#: web/templates/settings-analytics.html:80
+#: web/templates/settings-analytics.html:94
+msgid "Analytics"
+msgstr ""
+
+#: web/templates/settings-analytics.html:81 web/templates/settings.html:29
+#: web/templates/settings/settings-data-website.html:8
+msgid "This is your general bot settings such as name and id"
+msgstr ""
+
+#: web/templates/settings-analytics.html:91
+msgid "Analytics is coming soon!"
+msgstr ""
+
+#: web/templates/settings-analytics.html:105
+msgid "Unique Visitors"
+msgstr ""
+
+#: web/templates/settings-analytics.html:117
+msgid "Total Pageviews"
+msgstr ""
+
+#: web/templates/settings-analytics.html:129
+msgid "Bounce Rate"
+msgstr ""
+
+#: web/templates/settings-analytics.html:141
+msgid "Visit Duration"
+msgstr ""
+
+#: web/templates/settings-data.html:28
+#: web/templates/settings-integrations.html:61
+msgid "data sources"
+msgstr ""
+
+#: web/templates/settings-data.html:31 web/templates/settings-history.html:13
+#: web/templates/settings-integrations.html:65
+#: web/templates/settings-theme.html:16 web/templates/settings.html:12
+msgid "Home"
+msgstr ""
+
+#: web/templates/settings-data.html:37 web/templates/settings-history.html:19
+#: web/templates/settings-integrations.html:71
+msgid "Data Sources"
+msgstr ""
+
+#: web/templates/settings-data.html:45
+msgid "Data sources"
+msgstr ""
+
+#: web/templates/settings-data.html:47
+#: web/templates/settings/settings-data-website.html:7
+msgid "Website data sources"
+msgstr ""
+
+#: web/templates/settings-data.html:47
+msgid "with crawled pages"
+msgstr ""
+
+#: web/templates/settings-data.html:48
+msgid "Documents Data sources"
+msgstr ""
+
+#: web/templates/settings-data.html:49
+#: web/templates/settings/settings-data-codebase.html:7
+msgid "Codebase data sources"
+msgstr ""
+
+#: web/templates/settings-history.html:10
+msgid "chat history"
+msgstr ""
+
+#: web/templates/settings-history.html:27
+msgid "Chat History"
+msgstr ""
+
+#: web/templates/settings-history.html:28
+msgid "Select a conversation to get started."
+msgstr ""
+
+#: web/templates/settings-history.html:45
+msgid "Session ID"
+msgstr ""
+
+#: web/templates/settings-history.html:46
+msgid "Total Messages"
+msgstr ""
+
+#: web/templates/settings-history.html:47
+msgid "First Message"
+msgstr ""
+
+#: web/templates/settings-history.html:63
+msgid "No chat history available."
+msgstr ""
+
+#: web/templates/settings-integrations.html:86
+msgid "Integrations"
+msgstr ""
+
+#: web/templates/settings-integrations.html:97
+msgid "View All"
+msgstr ""
+
+#: web/templates/settings-integrations.html:102
+msgid "Utility"
+msgstr ""
+
+#: web/templates/settings-integrations.html:107
+msgid "Marketing"
+msgstr ""
+
+#: web/templates/settings-integrations.html:112
+msgid "Development"
+msgstr ""
+
+#: web/templates/settings-theme.html:13
+msgid "try & share"
+msgstr ""
+
+#: web/templates/settings-theme.html:30
+msgid "Try & Share!"
+msgstr ""
+
+#: web/templates/settings-theme.html:31
+msgid ""
+"Here you can try and play with your bot, also you can share it or embed it "
+"in your web apps. Anyone with this link will be able to interact with your "
+"chatbot"
+msgstr ""
+
+#: web/templates/settings-theme.html:38
+msgid "Share with others!"
+msgstr ""
+
+#: web/templates/settings-theme.html:62
+msgid "Embed on your web app as a chat bubble"
+msgstr ""
+
+#: web/templates/settings-theme.html:78
+msgid "Copy the following code into your website head script"
+msgstr ""
+
+#: web/templates/settings-theme.html:160
+msgid "Embed on your web app as a search box"
+msgstr ""
+
+#: web/templates/settings-theme.html:176
+msgid ""
+"Copy the following code into your website head script. Please read the "
+"documentation to see all the options for the search widget."
+msgstr ""
+
+#: web/templates/settings.html:9
+msgid "general settings"
+msgstr ""
+
+#: web/templates/settings.html:18 web/templates/settings.html:28
+msgid "General Settings"
+msgstr ""
+
+#: web/templates/settings.html:33
+#: web/templates/settings/settings-data-documents.html:93
+msgid "Name"
+msgstr ""
+
+#: web/templates/settings.html:39
+msgid "Bot ID"
+msgstr ""
+
+#: web/templates/settings.html:52
+msgid "API Token"
+msgstr ""
+
+#: web/templates/settings.html:70
+msgid "Custom Context"
+msgstr ""
+
+#: web/templates/settings.html:71
+msgid ""
+"You can change your bot initial context / prompt from here. also you can "
+"change the bot response language."
+msgstr ""
+
+#: web/templates/settings.html:77
+msgid "Manual context"
+msgstr ""
+
+#: web/templates/settings.html:84
+msgid "or choose one of the below"
+msgstr ""
+
+#: web/templates/settings.html:89
+msgid "Customer Support"
+msgstr ""
+
+#: web/templates/settings.html:91
+msgid " Search Engine"
+msgstr ""
+
+#: web/templates/settings.html:97
+msgid "Teacher"
+msgstr ""
+
+#: web/templates/settings.html:99
+msgid "Critical thinker"
+msgstr ""
+
+#: web/templates/settings.html:105
+msgid "Software Engineer"
+msgstr ""
+
+#: web/templates/settings.html:107
+msgid "Ghost Writer"
+msgstr ""
+
+#: web/templates/settings.html:116
+msgid "Save Changes"
+msgstr ""
+
+#: web/templates/settings.html:131
+msgid "Delete the bot"
+msgstr ""
+
+#: web/templates/settings.html:134
+msgid "Deleting the bot will delete all the data associated with it."
+msgstr ""
+
+#: web/templates/settings/settings-data-addmore.html:3
+msgid "Want to add new sources?"
+msgstr ""
+
+#: web/templates/settings/settings-data-addmore.html:10
+#: web/templates/settings/settings-data-addmore.html:32
+msgid "Add new data source"
+msgstr ""
+
+#: web/templates/settings/settings-data-addmore.html:46
+msgid ""
+"When you add a new data source, we will train our AI on this data, the "
+"results is that your chatbot should be able to answer questions from this "
+"data & knowldge"
+msgstr ""
+
+#: web/templates/settings/settings-data-addmore.html:82
+msgid ""
+"We are working on many other data sources, such as Notion, Confluence, Word "
+"Documents and many more."
+msgstr ""
+
+#: web/templates/settings/settings-data-codebase.html:8
+msgid "This part will show your codebase data"
+msgstr ""
+
+#: web/templates/settings/settings-data-codebase.html:39
+msgid "In progress"
+msgstr ""
+
+#: web/templates/settings/settings-data-codebase.html:39
+msgid "eta"
+msgstr ""
+
+#: web/templates/settings/settings-data-codebase.html:44
+msgid "Completed"
+msgstr ""
+
+#: web/templates/settings/settings-data-codebase.html:57
+#: web/templates/settings/settings-data-website.html:84
+msgid "Re-sync"
+msgstr ""
+
+#: web/templates/settings/settings-data-codebase.html:72
+#: web/templates/settings/settings-data-documents.html:55
+#: web/templates/settings/settings-data-website.html:102
+msgid "Delete"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:6
+msgid "Document data sources"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:7
+msgid "All your PDF/DOC/XLS files are in this list."
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:22
+msgid "Bulk Files"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:26
+msgid "upload_file"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:31
+msgid "wysiwyg"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:39
+#: web/templates/settings/settings-data-website.html:42
+msgid "Last update:"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:46
+msgid "files scanned"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:71
+#: web/templates/settings/settings-data-website.html:117
+msgid "Menu"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:96
+msgid "Download URL"
+msgstr ""
+
+#: web/templates/settings/settings-data-documents.html:99
+#: web/templates/settings/settings-data-website.html:157
+msgid "On"
+msgstr ""
+
+#: web/templates/settings/settings-data-website.html:33
+msgid "Website:"
+msgstr ""
+
+#: web/templates/settings/settings-data-website.html:49
+msgid "pages scanned"
+msgstr ""
+
+#: web/templates/settings/settings-data-website.html:142
+msgid "Url"
+msgstr ""
+
+#: web/templates/settings/settings-data-website.html:147
+msgid "Title"
+msgstr ""
+
+#: web/templates/settings/settings-data-website.html:152
+msgid "Status"
+msgstr ""
+
+#: web/templates/settings/settings-data-website.html:198
+msgid "Done"
+msgstr ""
+
+#: web/templates/widgets/chat-history.html:8
+msgid "person"
+msgstr ""
+
+#: web/templates/widgets/chat-history.html:26
+msgid "badge"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:21
+msgid ""
+"We are currently in the process of crawling your website to prepare your "
+"chatbot. Once the crawling is complete, your chatbot will be ready. To "
+"access all data sources, please"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:21
+#: web/templates/widgets/data-sources-updates.html:76
+msgid "click here"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:27
+msgid "We're sorry,"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:27
+msgid "but we're having trouble crawling your website"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:27
+msgid "Please double-check that your website is up and running."
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:46
+msgid "We are done crawling your website! Your chatbot is ready to go with"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:46
+msgid "knowledge"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:76
+msgid ""
+"We are currently in the process of processing your PDF files. It may take "
+"some time for the bot to ingest all the data. You can"
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:76
+msgid "to open all data sources."
+msgstr ""
+
+#: web/templates/widgets/data-sources-updates.html:82
+msgid ""
+"We encountered a problem while training the bot on your PDF files. Our team "
+"has been alerted, and we will investigate the issue."
+msgstr ""
