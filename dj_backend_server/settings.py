@@ -44,24 +44,6 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 # from django.conf import settings
 # logging.config.dictConfig(settings.LOGGING)
 # logger = logging.getLogger(__name__)
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "console": {"class": "logging.StreamHandler", "formatter": "detailed"},
-    },
-    "formatters": {
-        "detailed": {
-            "format": "%(asctime)s | %(levelname)s:%(name)s:%(message)s",
-            "style": "%",
-            "datefmt": "%Y-%m-%d %H:%M:%S",
-        },
-    },
-    "root": {
-        "handlers": ["console"],
-        "level": "DEBUG" if DEBUG else "ERROR",
-    },
-}
 
 ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', '').split(',') if h.strip()]
 if not ALLOWED_HOSTS:
@@ -260,3 +242,35 @@ for var in required_env_vars:
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 WHITENOISE_MAX_AGE = 31536000  # 1 year for hashed files
+
+
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s %(levelname)s %(name)s: %(message)s",
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "simple",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": LOG_LEVEL,
+    },
+    "loggers": {
+        # Django internals
+        "django": {"handlers": ["console"], "level": LOG_LEVEL, "propagate": False},
+        "django.request": {"handlers": ["console"], "level": LOG_LEVEL, "propagate": False},
+        # Gunicorn workers
+        "gunicorn.error": {"handlers": ["console"], "level": LOG_LEVEL, "propagate": False},
+        "gunicorn.access": {"handlers": ["console"], "level": LOG_LEVEL, "propagate": False},
+    },
+}
+
