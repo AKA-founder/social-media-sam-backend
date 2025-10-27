@@ -241,7 +241,7 @@ for var in required_env_vars:
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-WHITENOISE_MAX_AGE = 31536000  # 1 year for hashed files
+
 
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
@@ -290,4 +290,12 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = 86400  # 1 dag; øg senere når alt er testet
     SECURE_HSTS_INCLUDE_SUBDOMAINS = False
     SECURE_HSTS_PRELOAD = False
+
+# WhiteNoise: lang cache på hashed filer, kort på ikke-hashed
+WHITENOISE_MAX_AGE = 60  # sek. for ikke-hashed (can be low)
+WHITENOISE_IMMUTABLE_FILE_TEST = lambda path, url: url is not None and url.find('?') == -1 and ('.' in url and url.split('.')[-2].endswith(('.')))
+
+# Django 4+: brug CompressedManifestStaticFilesStorage når filer er konsistente
+# (vi blev på StaticFilesStorage tidligere pga. manglende .map; hold denne hvis alt er i orden)
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
