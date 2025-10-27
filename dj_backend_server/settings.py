@@ -63,7 +63,10 @@ LOGGING = {
     },
 }
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', '').split(',') if h.strip()]
+if not ALLOWED_HOSTS:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 
 # Use /tmp as the temporary media directory
 # MEDIA_ROOT = '/tmp/'
@@ -208,7 +211,10 @@ SESSION_ENGINE = (
     "django.contrib.sessions.backends.db"  # You can choose other engines as well
 )
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', '').split(',') if h.strip()]
+if not ALLOWED_HOSTS:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 APP_URL = os.environ.get("APP_URL", "http://0.0.0.0:8000")
 
 CSRF_COOKIE_SECURE = True
