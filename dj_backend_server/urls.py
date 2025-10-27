@@ -23,16 +23,18 @@ from django.urls import path, include
 from django.http import JsonResponse
 from web.views.view_root import root_navigation_view
 
+
+def readyz(_request):
+    data = {"db": "unknown", "redis": "skipped"}
+
+
+
 urlpatterns = [
     path('', include('web.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),  # Include the API URLs from the 'api' app,
     path('healthz', healthz),
     path('readyz', readyz),]
-
-
-def readyz(_request):
-    data = {"db": "unknown", "redis": "skipped"}
     try:
         from django.db import connections
         conn = connections["default"]
