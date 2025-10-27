@@ -1,3 +1,6 @@
+def healthz(_request):
+    return JsonResponse({'status': 'ok'})
+
 """
 URL configuration for dj_backend_server project.
 
@@ -16,10 +19,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
 from web.views.view_root import root_navigation_view
 
 urlpatterns = [
     path('', include('web.urls')),
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),  # Include the API URLs from the 'api' app
-]
+    path('api/', include('api.urls')),  # Include the API URLs from the 'api' app,
+    path('healthz', healthz),]
