@@ -88,20 +88,20 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
 ]
-
 MIDDLEWARE = [
-    "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware",
-    "api.middleware.cors_middleware.CorsMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'api.middleware.cors_middleware.CorsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
 
 ROOT_URLCONF = "dj_backend_server.urls"
 
