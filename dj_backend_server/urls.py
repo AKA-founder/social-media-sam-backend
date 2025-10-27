@@ -30,6 +30,9 @@ def readyz(_request):
             data["redis"] = f"error: {type(exc).__name__}"
 
 
+    # OpenAI key status (ingen hemmeligheder lækkes)
+    data["openai"] = "configured" if os.getenv("OPENAI_API_KEY") else "missing"
+
     status = 200 if data["db"] == "ok" and (data["redis"] in ("ok","skipped")) else 503
     return JsonResponse({"status": "ok" if status == 200 else "degraded", **data}, status=status)
 
