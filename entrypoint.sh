@@ -24,7 +24,7 @@ fi
 echo "[entrypoint] Running migrate…"
 python manage.py migrate --noinput
 echo "[entrypoint] Running collectstatic…"
-python manage.py collectstatic --noinput
+python manage.py collectstatic --noinput --ignore="*.map"
 
 echo "[entrypoint] Starting Gunicorn on 0.0.0.0:${PORT:-8000} …"
 exec gunicorn dj_backend_server.wsgi:application \
