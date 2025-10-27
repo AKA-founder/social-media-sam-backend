@@ -32,7 +32,7 @@ def ai_ping(_request):
             with urllib.request.urlopen(req, timeout=5) as resp:
                 code = resp.getcode()
         else:
-            with httpx.Client(timeout=httpx.Timeout(connect=2.0, read=3.0)) as client:
+            with httpx.Client(timeout=httpx.Timeout(connect=2.0, read=3.0, write=3.0, pool=2.0)) as client:
                 r = client.get(url, headers=headers)
                 code = r.status_code
 
