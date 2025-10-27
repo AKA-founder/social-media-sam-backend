@@ -200,16 +200,16 @@ if not ALLOWED_HOSTS:
 
 APP_URL = os.environ.get("APP_URL", "http://0.0.0.0:8000")
 
-CSRF_COOKIE_SECURE = True
+
 CSRF_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SECURE = True
+
 SESSION_COOKIE_HTTPONLY = True
-SECURE_SSL_REDIRECT = True
-SECURE_HSTS_SECONDS = 3600
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+
+
+
+
 CORS_ALLOW_CREDENTIALS = True
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 
 CORS_ALLOWED_ORIGINS = [APP_URL]
 
@@ -273,4 +273,21 @@ LOGGING = {
         "gunicorn.access": {"handlers": ["console"], "level": LOG_LEVEL, "propagate": False},
     },
 }
+
+# --- Security behind proxy (Railway terminates TLS) ---
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Secure cookies in prod
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# Optional redirect to HTTPS in prod (can be overridden by env)
+SECURE_SSL_REDIRECT = os.getenv("SECURE_SSL_REDIRECT", "true").lower() in {"1","true","yes"}
+
+# HSTS (kun når DEBUG=False)
+if not DEBUG:
+    SECURE_HSTS_SECONDS = 86400  # 1 dag; øg senere når alt er testet
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+    SECURE_HSTS_PRELOAD = False
 
