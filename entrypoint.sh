@@ -27,7 +27,7 @@ echo "[entrypoint] Running collectstatic…"
 python manage.py collectstatic --noinput --ignore="*.map"
 
 echo "[entrypoint] Starting Gunicorn on 0.0.0.0:${PORT:-8000} …"
-exec gunicorn dj_backend_server.wsgi:application \
+exec gunicorn dj_backend_server.wsgi:application --bind 0.0.0.0:${PORT} --workers ${GUNICORN_WORKERS:-3} --timeout ${GUNICORN_TIMEOUT:-60} --graceful-timeout ${GUNICORN_GRACEFUL_TIMEOUT:-30} --keep-alive ${GUNICORN_KEEPALIVE:-5}
   --bind 0.0.0.0:${PORT:-8000} \
   --workers ${GUNICORN_WORKERS:-3} \
   --timeout 60 \
