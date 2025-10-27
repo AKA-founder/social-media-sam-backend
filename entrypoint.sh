@@ -1,6 +1,10 @@
+#!/bin/bash
 set -euo pipefail
+
+# Optional text replacements if envs exist (WHY: avoid hardcoded 0.0.0.0:8000 in static JS)
 CHAT_JS_FILE="/app/web/static/chat.js"
 SEARCH_JS_FILE="/app/web/static/search.js"
+
 if [[ -f "$CHAT_JS_FILE" ]]; then
   [[ -n "${APP_URL:-}" ]] && sed -i "s|http://0.0.0.0:8000|${APP_URL}|g" "$CHAT_JS_FILE"
   [[ -n "${LNG_BOT:-}" ]]   && sed -i "s|Bot is Thinking...|${LNG_BOT}|g" "$CHAT_JS_FILE"
@@ -13,8 +17,11 @@ if [[ -f "$SEARCH_JS_FILE" && -n "${APP_URL:-}" ]]; then
   sed -i "s|http://0.0.0.0:8000|${APP_URL}|g" "$SEARCH_JS_FILE"
 fi
 
+# Housekeeping before serving (WHY: ensure DB & static are ready)
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
+
+# Run Gunicorn bound to Railway's PORT (WHY: platform requires $PORT)
 exec gunicorn dj_backend_server.wsgi:application \
   --bind 0.0.0.0:${PORT:-8000} \
   --workers ${GUNICORN_WORKERS:-3} \
