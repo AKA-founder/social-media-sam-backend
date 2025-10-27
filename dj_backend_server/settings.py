@@ -91,7 +91,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.security.SecurityMiddleware",
+    "django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware",
     "api.middleware.cors_middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -255,3 +256,7 @@ required_env_vars = ["SECRET_KEY", "DATABASE_URL", "APP_URL", "OPENAI_API_KEY"]
 for var in required_env_vars:
     if not os.environ.get(var):
         raise Exception(f"Missing required environment variable: {var}")
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+WHITENOISE_MAX_AGE = 31536000  # 1 year for hashed files
