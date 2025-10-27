@@ -257,6 +257,6 @@ for var in required_env_vars:
     if not os.environ.get(var):
         raise Exception(f"Missing required environment variable: {var}")
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 WHITENOISE_MAX_AGE = 31536000  # 1 year for hashed files
