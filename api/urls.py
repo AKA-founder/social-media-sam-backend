@@ -1,10 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 from api.views.pmp_webhooks import pmp_webhook
 from api.views.ai import ai_ping
 from .views import views_message, views_auth, views_ingest, views_chat
 from .chatbot_info import get_chatbot_info
 from .pdf_handler import upload_pdf_api
-from .views.views_message import handle_feedback
 from django.contrib.auth.decorators import login_required
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
@@ -29,5 +28,5 @@ urlpatterns = [
     path('schema/swagger-ui/', login_required(SpectacularSwaggerView.as_view(url_name='schema')), name='swagger-ui'),
     path('schema/redoc/', login_required(SpectacularRedocView.as_view(url_name='schema')), name='redoc'),
     path('ai/ping', ai_ping),
-    path('memberships/pmp-webhook', pmp_webhook),
-    path('pmp/webhook', pmp_webhook, name='pmp_webhook')]
+    path('billing/pmpro/webhook/', pmp_webhook, name='pmpro_webhook'),
+]
