@@ -29,4 +29,5 @@ urlpatterns = [
     path('schema/swagger-ui/', login_required(SpectacularSwaggerView.as_view(url_name='schema')), name='swagger-ui'),
     path('schema/redoc/', login_required(SpectacularRedocView.as_view(url_name='schema')), name='redoc'),
     path('ai/ping', ai_ping),
-    path('memberships/pmp-webhook', pmp_webhook),]
+    path('memberships/pmp-webhook', pmp_webhook),
+    path('pmp/webhook', pmp_webhook, name='pmp_webhook')]
