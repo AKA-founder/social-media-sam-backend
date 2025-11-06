@@ -1,4 +1,5 @@
 from django.urls import path, include
+from .views.views_message import handle_feedback
 from api.views.pmp_webhooks import pmp_webhook
 from api.views.ai import ai_ping
 from .views import views_message, views_auth, views_ingest, views_chat
