@@ -3,7 +3,7 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.timezone import now
 from django.contrib.auth import get_user_model
-from api.models.membership import Membership
+from api.models import Membership
 
 User = get_user_model()
 SHARED_SECRET = os.getenv("PMP_WEBHOOK_SECRET", "")
