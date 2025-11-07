@@ -1,0 +1,38 @@
+import os, json, logging
+from django.http import JsonResponse, HttpResponseForbidden
+from django.views.decorators.csrf import csrf_exempt
+
+logger = logging.getLogger(__name__)
+
+AKA_TOKEN = os.getenv("AKA_WEBHOOK_TOKEN", "")
+
+@csrf_exempt
+def pmp_webhook(request):
+    if request.method != "POST":
+        return JsonResponse({"status": "ok", "method": request.method}, status=200)
+
+    # 1) Tjek shared secret
+    supplied = request.headers.get("X-AKA-Token", "")
+    if not AKA_TOKEN or supplied != AKA_TOKEN:
+        logger.warning("Webhook rejected: bad token")
+        return HttpResponseForbidden("Invalid token")
+
+    # 2) Læs payload
+    try:
+        body = request.body.decode("utf-8") or "{}"
+        data = json.loads(body)
+    except Exception:
+        data = {}
+
+    logger.info("pmp_webhook payload=%s", data)
+
+    # 3) (valgfrit) reagér på events
+    event = data.get("event")
+    if event == "pmpro.membership.changed":
+        user_id = data.get("user_id")
+        level_id = data.get("level_id")
+        cancel_lvl = data.get("cancel_lvl")
+        logger.info("PMPro change: user=%s level=%s cancel=%s", user_id, level_id, cancel_lvl)
+
+    return JsonResponse({"status": "ok"})
+
