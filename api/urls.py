@@ -2,6 +2,7 @@ from django.urls import path, include
 from .views.views_message import handle_feedback
 from api.views.pmp_webhooks import pmp_webhook
 from api.views.ai import ai_ping
+from api.views.health import status)
 from .views import views_message, views_auth, views_ingest, views_chat
 from .chatbot_info import get_chatbot_info
 from .pdf_handler import upload_pdf_api
@@ -29,5 +30,6 @@ urlpatterns = [
     path('schema/swagger-ui/', login_required(SpectacularSwaggerView.as_view(url_name='schema')), name='swagger-ui'),
     path('schema/redoc/', login_required(SpectacularRedocView.as_view(url_name='schema')), name='redoc'),
     path('ai/ping', ai_ping),
+    path('status', status, name='status'), 
     path('billing/pmpro/webhook/', pmp_webhook, name='pmpro_webhook'),
 ]
